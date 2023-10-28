@@ -44,7 +44,7 @@ task.spawn(function()
     local githubconnected, jsontable = pcall(function() return httpService:JSONDecode(game:HttpGet("https://raw.githubusercontent.com/SystemXVoid/utilities/main/antiloggerdatabase.json", true)) end)
     if githubconnected and type(jsontable) == "table" then 
         for i,v in pairs(jsontable) do 
-            if table.find(whitelistedlinks, v) then 
+            if not table.find(whitelistedlinks, v) then 
                 table.insert(whitelistedlinks, v)
             end
         end
