@@ -1,6 +1,5 @@
-local Owner = "AlSploitOnDiesel"
-
-local LocalPlayer = game.Players.LocalPlayer
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Owner = LocalPlayer.Name
 
 local CollectionService = game:GetService("CollectionService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
